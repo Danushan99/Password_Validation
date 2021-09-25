@@ -62,8 +62,11 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(10),
                     borderSide: BorderSide(color: Colors.black),
                   ),
-                  hintText: "Password"),
-            )
+                  hintText: "Password",
+                  contentPadding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                  
+                  ),
+            ),
           ],
         ),
       ),
