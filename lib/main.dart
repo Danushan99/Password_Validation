@@ -30,9 +30,13 @@ class _HomePageState extends State<HomePage> {
   bool _ishasPasswordNumber = false;
 
   onPasswordChanged(String password) {
-    _isPasswordEightCharacter = false;
+    final numericRegex = RegExp(r'[0-9]');
+
     setState(() {
+      _isPasswordEightCharacter = false;
       if (password.length >= 8) _isPasswordEightCharacter = true;
+      _ishasPasswordNumber = false;
+      if (numericRegex.hasMatch(password)) _ishasPasswordNumber = true;
     });
   }
 
