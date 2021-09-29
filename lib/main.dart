@@ -103,7 +103,9 @@ class _HomePageState extends State<HomePage> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade400),
+                      border: _isPasswordEightCharacter
+                          ? Border.all(color: Colors.transparent)
+                          : Border.all(color: Colors.grey.shade400),
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: Center(
