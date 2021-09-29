@@ -26,6 +26,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool _isVisible = false;
+  bool _isPasswordEightCharacter = false;
+  bool _ishasPasswordNumber = false;
+
+  onPasswordChanged(String password) {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,6 +64,7 @@ class _HomePageState extends State<HomePage> {
                 height: 30,
               ),
               TextField(
+                onChanged: (password) => onPasswordChanged(password),
                 obscureText: !_isVisible,
                 decoration: InputDecoration(
                   suffixIcon: IconButton(
@@ -142,14 +147,21 @@ class _HomePageState extends State<HomePage> {
                   Text("Contains at least 1 Numbers"),
                 ],
               ),
-              SizedBox(height: 50,),
+              SizedBox(
+                height: 50,
+              ),
               MaterialButton(
                 height: 40,
                 minWidth: double.infinity,
                 color: Colors.black,
-                child: Text("CREATE ACCOUNT",style: TextStyle(color: Colors.white),),
-                onPressed: (){}
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),),
+                child: Text(
+                  "CREATE ACCOUNT",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5)),
+              ),
             ],
           ),
         ));
