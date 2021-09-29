@@ -142,6 +142,14 @@ class _HomePageState extends State<HomePage> {
                   Text("Contains at least 1 Numbers"),
                 ],
               ),
+              SizedBox(height: 50,),
+              MaterialButton(
+                height: 40,
+                minWidth: double.infinity,
+                color: Colors.black,
+                child: Text("CREATE ACCOUNT",style: TextStyle(color: Colors.white),),
+                onPressed: (){}
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),),
             ],
           ),
         ));
