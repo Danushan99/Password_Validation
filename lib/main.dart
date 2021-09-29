@@ -25,6 +25,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool _isVisible = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +60,18 @@ class _HomePageState extends State<HomePage> {
               height: 30,
             ),
             TextField(
+              obscureText: !_isVisible,
               decoration: InputDecoration(
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    setState(() {
+                      _isVisible = !_isVisible;
+                    });
+                  },
+                  icon: _isVisible
+                      ? Icon(Icons.visibility)
+                      : Icon(Icons.visibility_off),
+                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: const BorderSide(color: Colors.black),
