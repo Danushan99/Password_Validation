@@ -29,7 +29,13 @@ class _HomePageState extends State<HomePage> {
   bool _isPasswordEightCharacter = false;
   bool _ishasPasswordNumber = false;
 
-  onPasswordChanged(String password) {}
+  onPasswordChanged(String password) {
+    _isPasswordEightCharacter = false;
+    setState(() {
+      if (password.length >= 8) _isPasswordEightCharacter = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,6 +109,9 @@ class _HomePageState extends State<HomePage> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
+                      color: _isPasswordEightCharacter
+                          ? Colors.green
+                          : Colors.transparent,
                       border: _isPasswordEightCharacter
                           ? Border.all(color: Colors.transparent)
                           : Border.all(color: Colors.grey.shade400),
@@ -132,6 +141,9 @@ class _HomePageState extends State<HomePage> {
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
+                      color: _ishasPasswordNumber
+                          ? Colors.green
+                          : Colors.transparent,
                       border: Border.all(color: Colors.grey.shade400),
                       borderRadius: BorderRadius.circular(50),
                     ),
