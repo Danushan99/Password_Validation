@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -30,22 +32,22 @@ class _HomePageState extends State<HomePage> {
         // ignore: prefer_const_constructors
         title: Text(
           "Create Your Account",
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
         ),
         elevation: 0,
         backgroundColor: Colors.white,
       ),
       body: Container(
         color: Colors.white,
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Set a Password ",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
@@ -53,19 +55,19 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                   fontSize: 16, height: 1.5, color: Colors.grey.shade600),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.black),
-                  ),
-                  hintText: "Password",
-                  contentPadding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-                  
-                  ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: const BorderSide(color: Colors.black),
+                ),
+                hintText: "Password",
+                contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              ),
             ),
           ],
         ),
