@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
     );
   }
+
 }
 
 class HomePage extends StatefulWidget {
@@ -84,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                       });
                     },
                     icon: _isVisible
-                        ? Icon(
+                        ? const Icon(
                             Icons.visibility,
                             color: Colors.black,
                           )
@@ -96,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.black),
+                    borderSide: const BorderSide(color: Colors.black),
                   ),
                   hintText: "Password",
                   contentPadding:
@@ -106,6 +107,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 30,
               ),
+              
               Row(
                 children: [
                   AnimatedContainer(
@@ -180,6 +182,7 @@ class _HomePageState extends State<HomePage> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
               ),
+              Text('data');
             ],
           ),
         ));
