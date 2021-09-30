@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
     );
   }
-
 }
 
 class HomePage extends StatefulWidget {
@@ -45,7 +44,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          // ignore: prefer_const_constructors
           title: Text(
             "Create Your Account",
             style: const TextStyle(color: Colors.black),
@@ -60,14 +58,14 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Set a Password ",
+                "Set a Password",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 10,
               ),
               Text(
-                "Please create a secure password including the following crieria below",
+                "Please create a secure password including the following crieria below ",
                 style: TextStyle(
                     fontSize: 16, height: 1.5, color: Colors.grey.shade600),
               ),
@@ -107,7 +105,6 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 30,
               ),
-              
               Row(
                 children: [
                   AnimatedContainer(
@@ -182,7 +179,6 @@ class _HomePageState extends State<HomePage> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)),
               ),
-              Text('data');
             ],
           ),
         ));
