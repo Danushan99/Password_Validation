@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -107,7 +108,7 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children: [
                   AnimatedContainer(
-                    duration: Duration(microseconds: 500),
+                    duration: const Duration(microseconds: 500),
                     width: 20,
                     height: 20,
                     decoration: BoxDecoration(
@@ -119,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                           : Border.all(color: Colors.grey.shade400),
                       borderRadius: BorderRadius.circular(50),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Icon(
                         Icons.check,
                         color: Colors.white,
@@ -127,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text("Contains at least 8 characters"),
